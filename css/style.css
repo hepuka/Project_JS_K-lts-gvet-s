@@ -1,0 +1,349 @@
+/**********************************************
+*** Általános
+**********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  font-family: Open Sans;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+}
+
+.red {
+  color: red !important;
+}
+.red-focus:focus {
+  border: 1px solid red !important;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/**********************************************
+*** FELSŐ SZAKASZ
+**********************************************/
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.koltsegvetes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  color: black;
+  margin: 50px auto;
+}
+
+.koltsegvetes__cim {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.koltsegvetes__ertek {
+  font-weight: bold;
+  font-size: 46px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.koltsegvetes__bevetelek,
+.koltsegvetes__kiadasok {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.koltsegvetes__bevetelek {
+  margin-bottom: 10px;
+  background-color: #054240;
+  border-radius: 10px;
+}
+
+.koltsegvetes__kiadasok {
+  background-color: red;
+  border-radius: 10px;
+  color: #e7e7e7;
+}
+
+.koltsegvetes__bevetelek--szoveg,
+.koltsegvetes__kiadasok--szoveg {
+  float: left;
+  font-size: 13px;
+  color: #e7e7e7;
+  margin-top: 2px;
+}
+
+.koltsegvetes__bevetelek--ertek,
+.koltsegvetes__kiadasok--ertek {
+  letter-spacing: 1px;
+  float: left;
+  color: #e7e7e7;
+}
+
+.koltsegvetes__bevetelek--szazalek,
+.koltsegvetes__kiadasok--szazalek {
+  float: left;
+  width: 34px;
+  font-size: 11px;
+  padding: 3px 0;
+  margin-left: 10px;
+}
+
+.koltsegvetes__kiadasok--szazalek {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 3px;
+}
+
+/**********************************************
+*** ALSÓ SZAKASZ
+**********************************************/
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/***** FORM *****/
+.hozzaad {
+  padding: 14px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.hozzaad__tipus {
+  border: 1px solid #e7e7e7;
+  height: 44px;
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: 300;
+  text-align: center;
+  transition: border 0.6s;
+  border-radius: 5px;
+}
+
+.hozzaad__leiras,
+.hozzaad__ertek {
+  border: 1px solid #e7e7e7;
+  font-size: 14px;
+  padding: 12px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: border 0.6s;
+}
+
+.hozzaad__leiras {
+  width: 400px;
+}
+.hozzaad__ertek {
+  width: 100px;
+}
+
+.hozzaad__gomb {
+  font-size: 15px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #054240;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hozzaad__gomb:active {
+  transform: translateY(2px);
+}
+
+.hozzaad__tipus:focus,
+.hozzaad__leiras:focus,
+.hozzaad__ertek:focus {
+  outline: none;
+  border: 1px solid #054240;
+}
+
+.hozzaad__gomb:focus {
+  outline: none;
+}
+
+/***** LISTÁK *****/
+.kontener {
+  display: flex;
+  align-items: center;
+}
+
+.bevetelek {
+  min-width: 475px;
+  margin-right: 10px;
+}
+
+.kiadasok {
+  min-width: 475px;
+  margin-left: 10px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  padding-left: 13px;
+}
+
+.bevetelek_cim {
+  color: #054240;
+}
+.kiadasok__cim {
+  color: red;
+}
+
+.tetel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.tetel:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.tetel:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.tetel__ertek {
+  transition: transform 0.3s;
+}
+
+.tetel__szazalek {
+  float: left;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  font-size: 11px;
+  background-color: #ffdad9;
+  padding: 3px;
+  border-radius: 3px;
+  width: 32px;
+  text-align: center;
+}
+
+.bevetelek .tetel__ertek,
+.bevetelek .tetel__torol--gomb {
+  color: #28b9b5;
+}
+
+.kiadasok .tetel__ertek,
+.kiadasok .tetel__szazalek,
+.kiadasok .tetel__torol--gomb {
+  color: #ff5049;
+}
+
+.tetel__torol {
+  float: left;
+}
+
+.tetel__torol--gomb {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
+}
+
+.tetel__torol--gomb:focus {
+  outline: none;
+}
+.tetel__torol--gomb:active {
+  transform: translateY(2px);
+}
+
+.tetel:hover .tetel__torol--gomb {
+  display: block;
+}
+.tetel:hover .tetel__ertek {
+  transform: translateX(-20px);
+}
+.tetel:hover .tetel__szazalek {
+  transform: translateX(-20px);
+}
+
+.fizetetlen {
+  background-color: #ffdad9 !important;
+  cursor: pointer;
+  color: #ff5049;
+}
+
+.fizetetlen .tetel__szazalek {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.fizetetlen:hover .tetel__leiras {
+  font-weight: 900;
+}
+
+@media (max-width: 1000px) {
+  .kontener {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+
+  .kiadasok {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .hozzaad {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .bevetelek {
+    margin-left: 10px;
+  }
+
+  .hozzaad__gomb {
+    margin: 0 auto;
+  }
+}
