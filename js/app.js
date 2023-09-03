@@ -333,10 +333,10 @@ let feluletVezerlo = (function () {
     },
 
     datumMegjelenites: function () {
-      let most, ev, honap, honapok;
+      let most, ev, honap, honapok, nap;
 
       honapok = [
-        "január",
+        "Január",
         "Február",
         "Március",
         "Április",
@@ -352,9 +352,11 @@ let feluletVezerlo = (function () {
       most = new Date();
       ev = most.getFullYear();
       honap = most.getMonth();
+      nap = most.getDate();
 
-      document.querySelector(DOMelemek.datumCimke).textContent =
-        ev + ". " + honapok[honap];
+      document.querySelector(DOMelemek.datumCimke).textContent = `${ev}. ${
+        honapok[honap]
+      } ${String(nap).padStart(2, "0")}.`;
     },
 
     tetelTipusValtozas: function () {
