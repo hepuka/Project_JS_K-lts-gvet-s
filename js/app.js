@@ -1,5 +1,3 @@
-//MODUL PROGRAMTERVEZÉSI MINTA ALAPJÁN
-
 let koltsegvetesVezerlo = (function () {
   let adatok = {
     bevosszeg: 0,
